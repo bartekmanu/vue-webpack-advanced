@@ -61,6 +61,10 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    store: {
+      type: 'confirm',
+      message: 'Install Vuex store?',
+    },
     lint: {
       type: 'confirm',
       message: 'Use ESLint to lint your code?',
@@ -76,7 +80,7 @@ module.exports = {
           short: 'Standard',
         },
         {
-          name: 'Airbnb (https://github.com/airbnb/javascript)',
+          name: 'Airbnb (https://github.com/airbnb/javascript) - \u001b[31mYou may have issues with the initial code template\u001b[0m',
           value: 'airbnb',
           short: 'Airbnb',
         },
@@ -153,6 +157,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/store/**/*': 'store',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
