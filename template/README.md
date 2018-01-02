@@ -33,6 +33,18 @@ npm test
 {{/if_or}}
 ```
 
+{{#sass}}
+To use Sass or Scss you need to add a ``lang`` props to the ``style`` tag of your sinfle file component :
+
+``
+lang="scss" corresponds to the CSS-superset syntax (with curly braces and semicolons).
+``
+
+``
+lang="sass" corresponds to the indentation-based syntax.
+``
+{{/sass}}
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 Built with [vue-webpack-advanced](https://github.com/joZephhh/webpack-vue-advanced)

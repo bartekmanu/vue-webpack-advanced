@@ -65,6 +65,10 @@ module.exports = {
       type: 'confirm',
       message: 'Install Vuex store?',
     },
+    sass: {
+      type: 'confirm',
+      message: 'Using Sass or Scss lang ?',
+    },
     lint: {
       type: 'confirm',
       message: 'Use ESLint to lint your code?',
