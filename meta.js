@@ -65,6 +65,10 @@ module.exports = {
       type: 'confirm',
       message: 'Install Vuex store?',
     },
+    prerender: {
+      type: 'confirm',
+      message: 'Install prerender-spa-plugin?',
+    },
     sass: {
       type: 'confirm',
       message: 'Using Sass or Scss lang ?',
