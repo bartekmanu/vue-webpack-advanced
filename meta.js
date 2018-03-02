@@ -74,15 +74,23 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    vuemeta: {
+      when: 'isNotTest && router',
+      type: 'confirm',
+      message: 'Install vue-meta?',
+    },
     store: {
+      when: 'isNotTest',
       type: 'confirm',
       message: 'Install Vuex store?',
     },
     prerender: {
+      when: 'isNotTest',
       type: 'confirm',
       message: 'Install prerender-spa-plugin?',
     },
     sass: {
+      when: 'isNotTest',
       type: 'confirm',
       message: 'Using Sass or Scss lang ?',
     },

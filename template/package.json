@@ -27,7 +27,8 @@
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
     "vue-router": "^3.0.1"{{/router}}{{#store}},
-    "vuex":"latest"{{/store}}
+    "vuex":"latest"{{/store}}{{#vuemeta}},
+    "vue-meta":"^1.4.3"{{/vuemeta}}
   },
   "devDependencies": {
     {{#lint}}

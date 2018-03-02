@@ -91,6 +91,13 @@ export default {
       msg: 'Welcome to Your Vue.js App'
     }
   }
+  {{#vuemeta}},
+  metaInfo() {
+    return {
+      title: this.msg
+    }
+  }
+  {{/vuemeta}}
 }
 </script>
 
