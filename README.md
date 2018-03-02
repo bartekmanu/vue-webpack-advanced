@@ -1,8 +1,15 @@
 # vue-webpack-advanced boilerplate 
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction. Options added to vue-cli : Vuex, SASS or SCSS utilisation, Pre-rendering routes (prerender-spa-plugin)
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction
 
 > This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+
+## Options added to the original template 
+
+-  SASS or SCSS utilisation
+-  Pre-rendering routes with [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)
+-  [Vuex store](https://github.com/vuejs/vuex)
+-  Manage easily meta informations with [vue-meta](https://github.com/declandewet/vue-meta)
 
 ## Documentation
 

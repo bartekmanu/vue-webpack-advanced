@@ -34,7 +34,7 @@ npm test
 ```
 
 {{#sass}}
-To use Sass or Scss you need to add a ``lang`` props to the ``style`` tag of your sinfle file component :
+To use Sass or Scss you need to add a ``lang`` props to the ``style`` tag of your single file component :
 
 ``
 lang="scss" corresponds to the CSS-superset syntax (with curly braces and semicolons).
