@@ -125,11 +125,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     ])
     {{#prerender}},
     new PrerenderSpaPlugin(
-      // Absolute path to compiled SPA
-      path.join(__dirname, '../dist'),
-      // List of routes to prerender
-      [ '/']
-    )
+      {
+        staticDir: path.join(__dirname, '../dist'),
+        // Required - Routes to render.
+        routes: [
+          '/'
+        ],
+      }
+    ),
     {{/prerender}}
   ]
 })
