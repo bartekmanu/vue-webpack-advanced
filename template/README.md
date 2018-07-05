@@ -1,6 +1,6 @@
-# {{ name }}
+# futuro-pay
 
-> {{ description }}
+> A Vue.js project
 
 ## Build Setup
 
@@ -16,24 +16,8 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-{{#unit}}
-
-# run unit tests
-npm run unit
-{{/unit}}
-{{#e2e}}
-
-# run e2e tests
-npm run e2e
-{{/e2e}}
-{{#if_or unit e2e}}
-
-# run all tests
-npm test
-{{/if_or}}
 ```
 
-{{#sass}}
 To use Sass or Scss you need to add a ``lang`` props to the ``style`` tag of your single file component :
 
 ``
@@ -43,7 +27,6 @@ lang="scss" corresponds to the CSS-superset syntax (with curly braces and semico
 ``
 lang="sass" corresponds to the indentation-based syntax.
 ``
-{{/sass}}
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 

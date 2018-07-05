@@ -1,0 +1,51 @@
+// Font weights.
+$weights: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800
+);
+@each $name, $weight in $weights {
+    .f-weight--#{$name} {
+        font-weight: $weight;
+    }
+}
+
+//font colors loop
+$txt-color: (
+
+);
+
+@each $key, $val in $txt-color {
+  .f-color--#{$key} {
+    color: #{$val};
+  }
+}
+
+//font size
+@for $val from 12 through 36 {
+  .f-size--#{$val} {
+    font-size: #{$val}px;
+  }
+}
+
+// a loop containing: font family, color, font size
+// example: montserrat__main-text--36
+
+// @each $key, $val in $fonts-family {
+//   .#{$key} {
+//     @each $key2, $val2 in $txt-color {
+//       &__#{$key2} {
+//         @for $key3 from 12 through 36 {
+//           &--#{$key3} {
+//             font-family: #{$val};
+//             color: #{$val2};
+//             font-size: #{$key3}px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

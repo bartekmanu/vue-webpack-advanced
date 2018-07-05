@@ -1,0 +1,54 @@
+button:focus {
+    outline: none;
+}
+
+.scroll-position {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  margin-left: -10px;
+  display: none;
+  width: 100px;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+}
+
+.scroll-btn {
+  width: 20px;
+  height: 29px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px solid gray;
+  animation-name: scroll-btn;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+
+  .ball {
+    height: 4px;
+    width: 4px;
+    background-color: gray;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+  }
+}
+
+@keyframes scroll-btn {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(77, 103, 230, 0.4);
+    box-shadow: 0 0 0 0 rgba(77, 103, 230, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(77, 103, 230, 0);
+    box-shadow: 0 0 0 15px rgba(77, 103, 230, 0);
+    transform: scale(1.2);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(77, 103, 230, 0);
+    box-shadow: 0 0 0 0 rgba(77, 103, 230, 0);
+  }
+}

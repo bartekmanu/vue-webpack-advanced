@@ -8,7 +8,7 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-{{#lint}}const createLintingRule = () => ({
+const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
@@ -17,7 +17,7 @@ function resolve (dir) {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
-}){{/lint}}
+})
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
@@ -34,21 +34,23 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      {{#if_eq build "standalone"}}
       'vue$': 'vue/dist/vue.esm.js',
-      {{/if_eq}}
       '@': resolve('src'),
     }
   },
   module: {
     rules: [
-      {{#lint}}
       ...(config.dev.useEslint ? [createLintingRule()] : []),
-      {{/lint}}
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: vueLoaderConfig
+        options: {
+          vueLoaderConfig,
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+          }
+      }
       },
       {
         test: /\.js$/,
@@ -78,6 +80,20 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
       }
     ]
   },
